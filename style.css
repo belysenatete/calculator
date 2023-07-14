@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 150px;
+    width: 300px;
+    height: 450px;
+    
+
+}
+.screen {
+    width: inherit;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: black;
+}
+.currentScreen { 
+    font-size: 30px;
+    color: white;
+}
+.previousScreen {
+    font-size: 20px;
+    color: white;
+}
+.keyboard {
+    border-top: 2px solid white;
+    background-color: black;
+   display: grid;
+   grid-template-columns: repeat(4,83px);
+   grid-template-rows: repeat(5,50px);
+   row-gap: 20px;
+    
+}
+button {
+    width: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.operator {
+    color: white;
+    background-color: #f69906;
+}
+.operand {
+    color: white;
+   background-color: #313131; 
+}
+.otherButtons {
+    background-color: #9f9f9f;
+}
