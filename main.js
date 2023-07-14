@@ -4,6 +4,8 @@ let currentNumber = '';
 let previousNumber = '';
 const operand = document.querySelectorAll('.operand');
 const operator = document.querySelectorAll('.operator');
+const equal = document.querySelector('.equal')
+const clear = document.querySelector('.clear');
 const erase = document.querySelector('.delete');
 
 operand.forEach((operand) => operand.addEventListener("click", function(e){
@@ -17,7 +19,15 @@ operator.forEach((operator) => operator.addEventListener("click", function(e){
     currentScreen.innerHTML = currentNumber;
     
 }))
-erase.forEach((del))
+clear.addEventListener("click", function(e){
+        clearScreen(e.target.textContent);
+        previousScreen.innerHTML = previousNumber;
+        currentScreen.innerHTML = currentNumber;
+})
+equal.addEventListener("click", function(){
+  calculate();
+})
+
 
 function getOperand(operand){
   if (currentNumber.length <= 8) {
@@ -29,6 +39,27 @@ function getOperator(operator){
   previousNumber = currentNumber + operator;
   currentNumber = '';
 }
-function erase(){
-     
+function clearScreen(){
+  previousNumber = '';
+  currentNumber  ='';
+}
+function calculate(){
+   currentNumber = Number(currentNumber)
+   previousNumber = Number(previousNumber)
+  
+   if (operator === "+"){
+    previousNumber += currentNumber;
+   } else if (operator === "-"){
+    previousNumber -= currentNumber;
+   }
+   else if (operator === "x"){
+    previousNumber *= currentNumber;
+   }
+   else if (operator === "÷"){
+    previousNumber /= currentNumber;
+   }
+   else{
+    previousNumber %= currentNumber;
+   }
+   console.log(previousNumber);
 }
