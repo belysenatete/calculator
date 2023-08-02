@@ -16,11 +16,11 @@
     align-items: end;
     background-color: black;
 }
-.currentScreen { 
+#currentScreen { 
     font-size: 30px;
     color: white;
 }
-.previousScreen {
+#previousScreen {
     font-size: 20px;
     color: white;
 }
@@ -47,7 +47,4 @@ button {
 .operand {
     color: white;
    background-color: #313131; 
-}
-.otherButtons {
-    background-color: #9f9f9f;
 }
