@@ -1,14 +1,21 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .container {
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 80px;
     width: 300px;
     height: 450px;
+    
+    
     
 
 }
 .screen {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     width: inherit;
     height: 120px;
     display: flex;
@@ -42,9 +49,23 @@ button {
 }
 .operator {
     color: white;
-    background-color: #f69906;
+    background-color: #951a46;
 }
 .operand {
     color: white;
-   background-color: #313131; 
+   background-color: #657060; 
+}
+.otherButtons{
+    background-color: #949a9a;
+}
+footer {
+    margin-top: 50px;
+    font-size: 17px;
+    color: #657060;
+    display: flex;
+    justify-content: center;
+
+}
+a {
+    margin-top: 20px;
 }
